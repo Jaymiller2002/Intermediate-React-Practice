@@ -35,3 +35,30 @@ button {
 button:hover {
   background-image: linear-gradient(to top left, #e73a01, #0300b9);
 }
+
+input {
+	border: 1px solid rgb(0, 0, 0);
+  background-color: transparent;
+	height: 40px;
+	padding: 0 10px;
+	width: 200px;
+}
+
+@keyframes glow {
+  0% {
+  box-shadow: 0 0 5px rgba(0,255,229,0.9);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(0, 225, 229, 0.9);
+  }
+  100% {
+  box-shadow: 0 0 20px rgba(0, 255, 229, 0.9);
+  }
+}
+
+input:focus {
+	animation: glow 1000ms ease-in-out infinite alternate;
+	outline: none;
+}
+
+
