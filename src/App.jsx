@@ -21,8 +21,8 @@ const App = () => {
   }, []);
 
   return (
-    <div className="p-5 container">
-      <h1>Home Screen</h1>
+    <div className="p-5 container" style={{color: "white"}}>
+      <h1><Title /></h1>
       <Link to='./About'>{'Edit Team ->'}</Link>
       {teamData && (
         <div>

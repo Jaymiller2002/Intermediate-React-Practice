@@ -46,7 +46,7 @@ const About = () => {
   };
 
   return (
-    <div className="p-5">
+    <div className="p-5" style={{color: "white"}}>
       <Link to='/'>{'<- Home'}</Link>
       <h1>Edit Team Screen</h1>
       <label>
