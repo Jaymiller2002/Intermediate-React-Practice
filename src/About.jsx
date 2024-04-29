@@ -1,4 +1,4 @@
-import React, { useContext, useReducer } from 'react';
+import React, { useReducer } from 'react';
 import { Link } from 'react-router-dom';
 
 const initialState = {
@@ -17,7 +17,11 @@ const reducer = (state, action) => {
     case 'SUBMIT':
       // Handle form submission here
       console.log('Submitting:', state);
-      return initialState; // Reset state to initial values after submission
+      // Save team data to local storage
+      localStorage.setItem('teamData', JSON.stringify(state));
+      return state; // No need to reset state
+    case 'RESET':
+      return initialState;
     default:
       return state;
   }
@@ -37,6 +41,8 @@ const About = () => {
 
   const handleSubmit = () => {
     dispatch({ type: 'SUBMIT' });
+    // Clear inputs by resetting state to initial values
+    dispatch({ type: 'RESET' });
   };
 
   return (
