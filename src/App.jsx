@@ -1,22 +1,21 @@
-import { Link } from "react-router-dom"
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import TeamScreen from './TeamScreen';
 import About from './About';
 
 const Title = () => {
   return (
     <h1>
-      <Link to='./About'>Hello World!</Link>
+      Hello World!
     </h1>
   )
 }
 
-
-
 const App = () => {
   return (
-    <div>
-      <About />
-    </div>
+<div>
+  <Link to='./About'>About</Link>
+</div>
   );
 };
 
