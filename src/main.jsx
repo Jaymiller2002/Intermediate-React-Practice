@@ -12,7 +12,6 @@ import './App.css'
 
 import About from './About'
 import App from './App'
-import TeamScreen from './TeamScreen'
 import ErrorPage from './ErrorPage'
 import Header from './Header'
 import Footer from './Footer'
@@ -43,10 +42,6 @@ const router = createBrowserRouter([
       {
         path: '/about',
         element: <About />
-      },
-      {
-        path: '/TeamScreen',
-        element: <TeamScreen />
       }
     ]
   }

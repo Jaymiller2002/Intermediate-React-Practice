@@ -14,6 +14,10 @@ const reducer = (state, action) => {
       const updatedMembers = [...state.members];
       updatedMembers[action.payload.index] = action.payload.member;
       return { ...state, members: updatedMembers };
+    case 'SUBMIT':
+      // Handle form submission here
+      console.log('Submitting:', state);
+      return initialState; // Reset state to initial values after submission
     default:
       return state;
   }
@@ -31,9 +35,13 @@ const About = () => {
     dispatch({ type: 'SET_MEMBER', payload: { index, member: updatedMember } });
   };
 
+  const handleSubmit = () => {
+    dispatch({ type: 'SUBMIT' });
+  };
+
   return (
     <div className="p-5">
-      <Link to='/'>{'<- Back'}</Link>
+      <Link to='/'>{'<- Home'}</Link>
       <h1>Edit Team Screen</h1>
       <label>
         Team Name:
@@ -52,6 +60,7 @@ const About = () => {
           </label>
         </div>
       ))}
+      <button onClick={handleSubmit}>Submit</button>
     </div>
   );
 };
