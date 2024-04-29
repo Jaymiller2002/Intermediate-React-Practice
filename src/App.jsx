@@ -1,21 +1,23 @@
 import { Link } from "react-router-dom"
+import React from 'react';
+import About from './About';
 
 const Title = () => {
   return (
     <h1>
-      Hello World!
+      <Link to='./About'>Hello World!</Link>
     </h1>
   )
 }
 
-function App() {
+
+
+const App = () => {
   return (
-    <div className="p-5">
-      <Link to='/about'>About</Link>
-      <Title />
+    <div>
+      <About />
     </div>
-  )
-}
+  );
+};
 
-
-export default App
+export default App;
