@@ -9,7 +9,7 @@ body {
   height: 100%;
   flex-direction: column;
   justify-content: center;
-  background-image: linear-gradient(to bottom right, #2a3bd2, #21adc3);
+  background-image: linear-gradient(to bottom right, #e73a01, #0300b9);
 }
 #page-content {
   flex-grow: 2;
@@ -25,12 +25,13 @@ input {
 }
 
 button {
-  background-image: linear-gradient(to right, #24c7dc, #2f27c2);
+  background-image: linear-gradient(to bottom right, #24c7dc, #2f27c2);
   border: 1px solid black;
+  color: white;
   border-radius: 5px;
   transition: all 0.6s ease;
 }
 
 button:hover {
-  background-image: linear-gradient(to right, #24dc5b, #8c27c2);
+  background-image: linear-gradient(to top left, #e73a01, #0300b9);
 }
